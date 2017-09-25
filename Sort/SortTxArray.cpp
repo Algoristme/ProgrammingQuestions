@@ -1,18 +1,19 @@
- Given a sorted array of integers nums and integer values a, b and c. Apply a function of the form f(x) = ax2 + bx + c to each element x in the array.
+// Sort Tx array
+//  Given a sorted array of integers nums and integer values a, b and c. Apply a function of the form f(x) = ax2 + bx + c to each element x in the array.
 
-The returned array must be in sorted order.
+// The returned array must be in sorted order.
 
-Expected time complexity: O(n)
+// Expected time complexity: O(n)
 
-Example:
+// Example:
 
-nums = [-4, -2, 2, 4], a = 1, b = 3, c = 5,
+// nums = [-4, -2, 2, 4], a = 1, b = 3, c = 5,
 
-Result: [3, 9, 15, 33]
+// Result: [3, 9, 15, 33]
 
-nums = [-4, -2, 2, 4], a = -1, b = 3, c = 5
+// nums = [-4, -2, 2, 4], a = -1, b = 3, c = 5
 
-Result: [-23, -5, 1, 7]
+// Result: [-23, -5, 1, 7]
 
 
 class Solution {
@@ -46,19 +47,6 @@ public:
             return merge;
         }
         else {
-            // TODO: code up actual right merging.
-            //merge.resize(out.size());
-            //int j = out.size()-1;
-            //int low = 0;
-            //int high = out.size()-1;
-            //while( low <= high) {
-                //if(out[low] >= out[high]) {
-                    //merge[j--] = out[low++];
-                //}
-                //else {
-                    //merge[j--] = out[high--];
-                //}
-            //}
             int low = 0;
             // find the index of lowest point in parabola.
             for(;low < out.size()-1; ++low) {
